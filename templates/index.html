@@ -1,0 +1,98 @@
+{% include 'header.html' %}
+		<div class="flex header-wrapper">
+			<div class="flex-1">
+				<h1 class="title-text"><span id="title-1">COFFEE</span>/<span id="title-2">CODE</span> <span id="title-3">DATASET</span></h1>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="columns">
+				<div class="column is-two-thirds">
+					{% include content.graphs.CodingHours %}
+				</div>
+				<div class="column">
+					<div class="title is-1">
+						<br><br>
+						The programmers worked for <span class="accent-text">{{ content.stats.CodingHours.freq_i }}</span> hours on average
+					</div>
+				</div>
+			</div>
+			<hr>
+			<div class="columns">
+				<div class="column">
+					<div class="title is-1">
+						<br><br>
+						Overall, the most frequent number of cups is <span class="accent-text">{{ content.stats.CoffeeCupsPerDay.freq_i }}</span>
+					</div>
+				</div>
+				<div class="column is-two-thirds">
+					{% include content.graphs.CoffeeCupsPerDayPie %}
+				</div>
+			</div>
+			<hr>
+			<div class="columns">
+				<div class="column is-two-thirds">
+					{% include content.graphs.CupsPerHourPie %}
+				</div>
+				<div class="column">
+					<div class="title is-1">
+						<br><br>
+						Programmers usually drink <span class="accent-text">{{ content.stats.CupsPerHour.freq_i }}</span> cups per hour
+					</div>
+				</div>
+			</div>
+			<hr>
+			<div class="columns">
+				<div class="column">
+					<div class="title is-1">
+						<br><br>
+						Coders most frequently drink <span class="accent-text">{{ content.stats.CoffeeCupsPerDay.freq_i }}</span> cups while working for <span class="accent-text">{{ content.stats.CodingHours.freq_i }}</span> hours
+					</div>
+				</div>
+				<div class="column is-two-thirds">
+					{% include content.graphs.CoffeeCupsPerDay %}
+				</div>
+			</div>
+			<hr>
+			<div class="columns">
+				<div class="column is-two-thirds">
+					{% include content.graphs.CupsPerHour %}
+				</div>
+				<div class="column">
+					<div class="title is-1">
+						<br>
+						Programmers tend to drink <span class="accent-text">less</span> coffee per hour when working hours increase
+					</div>
+				</div>
+			</div>
+			<hr>
+			<div class="columns">
+				<div class="column">
+					<div class="title is-1">
+						<br><br>
+						Coders mostly drink coffee <span class="accent-text">{{ content.extra_stats.CoffeeTime.freq_i }}</span> coding
+					</div>
+				</div>
+				<div class="column is-two-thirds">
+					{% include content.graphs.CoffeeTime %}
+				</div>
+			</div>
+			<hr>
+		</div>
+		<br><br>
+		<div class="container">
+			<div class="columns">
+				<div class="column is-three-quarters">
+					<h1 class="title" align="right"><span class="accent-text">Further analysis</span></h1>
+				</div>
+				<div class="column">
+					<a class="button" href="/stats">
+						<span class="icon">
+							<i class="gg-push-chevron-right"></i>
+						</span>
+						<span>Next</span>
+					</a>
+				</div>
+			</div>
+		</div>
+{% include 'footer.html' %}
