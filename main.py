@@ -30,4 +30,4 @@ def predict():
     return ev.Predict(coding_hours, coffee_cups)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False)
