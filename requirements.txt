@@ -5,3 +5,4 @@ flask
 sklearn
 matplotlib
 seaborn
+gunicorn
